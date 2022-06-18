@@ -5,7 +5,12 @@
 
 
 function t1() {
-
+let x = document.querySelector('.out-1');
+let out = '';
+for (let index = 1; index <= 16; index++) {
+	out += `${index}_`
+}
+x.innerHTML = out;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -16,11 +21,16 @@ document.querySelector('.b-1').onclick = t1;
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t2() {
-
+let x = document.querySelector('.out-2')
+let out = '';
+for (let index = 12; index <= 38; index++){
+	if(index % 2 == 0) {
+		out += `${index}_`;
+	}
 }
-
+x.innerHTML = out;
+}
 document.querySelector('.b-2').onclick = t2;
-
 
 //  Task 3
 // Кнопка .b-3 запускает функцию t3. Функция должна выводить в .out-3 строку вида:
@@ -28,7 +38,12 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
-
+	let x = document.querySelector('.out-3')
+	let out = ''
+	for (let i = 25; i >= 7; i--) {
+		out += `${i}_`
+	}
+	x.innerHTML = out
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -40,7 +55,12 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
-
+	let x = document.querySelector('.out-4')
+	let out = ''
+	for (let i = 77; i >=35; i-=3) {
+		out += `${i}_`
+	}
+	x.innerHTML = out
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -52,7 +72,16 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
-
+	let x = document.querySelector('.out-5')
+	let out = ''
+	for (let i = 1; i <= 17; i++) {
+		if (i%2 == 0) {
+			out += `${i}_**`
+		} else {
+			out += `${i}_*`
+		}
+	}
+	x.innerHTML = out
 }
 
 document.querySelector('.b-5').onclick = t5;
